@@ -223,44 +223,119 @@ a:hover {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
-
 #hero {
     position: relative;
-    padding: 160px 0px 50px 0px;
+    padding: 150px 0px 50px 0px;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background: transparent;
 }
 
-#hero .name {
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+
+.hero-content .h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: var(--muted-text);
+    margin-bottom: 10px;
+}
+
+.hero-content .name {
+    font-size: 2.8rem;
+    font-weight: 800;
+    color: var(--text-color);
     background: var(--primary-gradient-color);
-    color: transparent;
     background-clip: text;
     -webkit-background-clip: text;
+    color: transparent;
 }
 
-#hero .btn-showcase {
-    border-radius: 32px;
-    border-color: #7042f88b;
-    border-width: 1px;
-    backdrop-filter: blur(6px);
-    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, 0.136);
-    transition: box-shadow 0.45s cubic-bezier(.6,.6,0,1);
+.btn-showcase {
+    border-radius: 25px;
+    padding: 8px 20px;
+    background: var(--secondary-gradient-color);
+    color: #fff;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    transition: var(--transition-default);
 }
 
-#hero .btn-showcase i {
-    font-size: 13px;
+.btn-showcase:hover {
+    background: var(--primary-gradient-color);
+    color: #fff;
 }
 
-#hero .btn-showcase:hover {
-    box-shadow: inset 0 -7px 11px rgba(141, 53, 229, 0.536);
-}
-
-#hero .badge-button {
-    margin-bottom: 15px;
-}
-
-#hero .tagline {
-    letter-spacing: 1.5px;
+.tagline {
+    font-size: 1rem;
+    font-weight: 400;
     color: var(--muted-text);
+    line-height: 1.7;
+}
+
+.underline {
+    background: var(--primary-gradient-color);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 600;
+}
+
+.social-icons a {
+    font-size: 20px;
+    margin: 0 8px;
+    color: var(--text-color);
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: var(--secondary-color);
+}
+
+.call-to-action .btn {
+    border-radius: 25px;
+    padding: 10px 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.primary-bg-btn {
+    background: var(--primary-gradient-color);
+    color: #fff;
+    border: none;
+}
+
+.primary-bg-btn:hover {
+    background: var(--secondary-gradient-color);
+    color: #fff;
+}
+
+.secondary-bg-btn {
+    background: transparent;
+    border: 2px solid var(--primary-color);
+    color: var(--primary-color);
+}
+
+.secondary-bg-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+/* Responsive tweak */
+@media (max-width: 768px) {
+    .hero-content .name {
+        font-size: 2rem;
+    }
+
+    .tagline {
+        font-size: 0.95rem;
+    }
 }
 
 /* Ini bagian foto hero */
