@@ -328,42 +328,48 @@ a:hover {
     }
 }
 /*--------------------------------------------------------------
-# Core Value Section
+# Core Values Section
 --------------------------------------------------------------*/
 #core-values {
     background: transparent;
-    padding: 80px 0;
+    padding: 100px 0; /* sedikit lebih lega */
 }
 
 .value-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.04); /* lebih subtle */
+    backdrop-filter: blur(6px); /* blur lebih lembut */
+    border: 1px solid rgba(255, 255, 255, 0.08); /* tambahkan garis tipis */
     border-radius: 20px;
-    padding: 30px 20px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 35px 25px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15); /* shadow lebih elegan */
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
     color: var(--text-color);
 }
 
 .value-card:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+    transform: translateY(-6px);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.2);
 }
 
 .value-card .icon {
-    font-size: 40px;
+    font-size: 42px;
+    margin-bottom: 15px;
+    color: var(--primary-color); /* kasih warna brand */
 }
 
 .large-card {
-    padding: 40px 30px;
+    padding: 50px 35px;
 }
 
 .large-card h5 {
-    font-size: 1.8rem;
+    font-size: 2rem; /* lebih tegas untuk card utama */
+    font-weight: 700;
+    margin-bottom: 15px;
 }
 
 .large-card p {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    color: var(--muted-text);
 }
 
 /*--------------------------------------------------------------
