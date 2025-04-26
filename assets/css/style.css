@@ -118,15 +118,21 @@ a:hover {
 --------------------------------------------------------------*/
 .logo-name {
     font-family: 'Poppins', sans-serif;
-    font-weight: 900; /* lebih bold */
-    font-size: 1.6rem; /* sedikit lebih besar */
+    font-weight: 900;
+    font-size: 1.6rem;
     letter-spacing: 0.5px;
     color: var(--text-color);
-    transition: var(--transition-default);
+    transition: all 0.4s ease;
+    display: inline-block; /* supaya animasi scaling jalan rapi */
 }
 
 .logo-name:hover {
-    text-shadow: 0 0 8px var(--primary-color);
+    color: var(--primary-color);
+    text-shadow:
+        0 0 5px var(--primary-color),
+        0 0 10px var(--primary-color),
+        0 0 15px var(--primary-color);
+    transform: scale(1.05); /* smooth zoom kecil */
 }
 
 #header {
