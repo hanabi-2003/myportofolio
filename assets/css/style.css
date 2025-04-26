@@ -328,57 +328,44 @@ a:hover {
     }
 }
 /*--------------------------------------------------------------
-# Things I Love Section
+# Core Value Section
 --------------------------------------------------------------*/
-
-#things-i-love {
-    padding: 90px 0px;
-    background-image: url(../images/grid.png);
-    background-size: contain;
-    min-height: 100vh;
+#core-values {
+    background: transparent;
+    padding: 80px 0;
 }
 
-#things-i-love .card {
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 1px 0 rgba(144, 81, 227, 0.5), 0 0 0.5px 0.5px rgba(141, 53, 229, 0.336);
+.value-card {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    color: var(--text-color);
 }
 
-#things-i-love .circle-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100%;
-    padding: 11px;
+.value-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
 }
 
-#things-i-love .circle {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    color: #fff;
-    background: var(--primary-gradient-color);
+.value-card .icon {
+    font-size: 40px;
 }
 
-#things-i-love .circle i {
-    font-size: 2.2rem;
+.large-card {
+    padding: 40px 30px;
 }
 
-#things-i-love .card-title {
-    font-size: 18px;
-    text-align: center;
+.large-card h5 {
+    font-size: 1.8rem;
 }
 
-#things-i-love .card-text {
-    text-align: center;
-    font-size: 14px;
-    color: var(--muted-text);
+.large-card p {
+    font-size: 1rem;
 }
+
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
