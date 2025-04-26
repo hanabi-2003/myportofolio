@@ -118,16 +118,15 @@ a:hover {
 --------------------------------------------------------------*/
 .logo-name {
     font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.4rem;
+    font-weight: 900; /* lebih bold */
+    font-size: 1.6rem; /* sedikit lebih besar */
     letter-spacing: 0.5px;
     color: var(--text-color);
     transition: var(--transition-default);
 }
 
 .logo-name:hover {
-    text-shadow: 0 0 8px var(--primary-color), 0 0 12px var(--primary-color);
-    color: var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-color);
 }
 
 #header {
