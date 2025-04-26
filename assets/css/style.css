@@ -126,7 +126,8 @@ a:hover {
 }
 
 .logo-name:hover {
-    text-shadow: 0 0 8px var(--primary-color);
+    text-shadow: 0 0 8px var(--primary-color), 0 0 12px var(--primary-color);
+    color: var(--primary-color);
 }
 
 #header {
