@@ -488,18 +488,12 @@ a:hover {
     scroll-margin-top: 80px;
 }
 
-/* Skills Section */
-#skills {
-    padding: 120px 0 180px 0;
-    scroll-margin-top: 80px;
-}
-
-/* Skill Card Container (Row) */
+/* Skills Container */
 .skills-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr); /* Default Desktop: 5 kolom */
     gap: 30px;
+    justify-items: center; /* Center isi dalam grid cell */
 }
 
 /* Skill Card */
@@ -541,27 +535,19 @@ a:hover {
     color: var(--text-color);
 }
 
-/* Responsive Layout */
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
+    .skills-container {
+        grid-template-columns: repeat(3, 1fr); /* Tablet 3 kolom */
+    }
+}
+
 @media (max-width: 768px) {
     #skills {
         padding: 100px 0 150px 0;
     }
-
     .skills-container {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-    }
-
-    .col {
-        width: 100%;
-        display: flex;
-        justify-content: center;
-    }
-
-    .skill-card {
-        width: 130px;
-        height: 130px;
+        grid-template-columns: repeat(2, 1fr); /* Mobile 2 kolom */
     }
 }
 
