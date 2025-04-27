@@ -491,13 +491,15 @@ a:hover {
     margin-bottom: 1rem;
 }
 
-/* Skill Section Padding */
+/*--------------------------------------------------------------
+# Skills Section
+--------------------------------------------------------------*/
 #skills {
     padding: 120px 0 180px 0;
-    scroll-margin-top: 80px; /* supaya kalau klik, berhenti pas tengah */
+    scroll-margin-top: 80px; /* Biar pas klik nav, section center */
 }
 
-/* Skill Card Container */
+/* Skills Container */
 .skills-container {
     display: flex;
     flex-wrap: wrap;
@@ -518,7 +520,7 @@ a:hover {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    transition: all 0.4s ease;
+    transition: var(--transition-default);
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     cursor: pointer;
 }
@@ -526,7 +528,7 @@ a:hover {
 .skill-card:hover {
     background: var(--primary-gradient-color);
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
 }
 
 /* Skill Icon */
@@ -534,25 +536,31 @@ a:hover {
     width: 48px;
     height: 48px;
     margin-bottom: 10px;
+    transition: var(--transition-default);
 }
 
 /* Skill Title */
 .skill-title {
     font-size: 15px;
     font-weight: 600;
-    letter-spacing: 0.8px;
+    letter-spacing: 1px;
     color: var(--text-color);
 }
 
-/* Responsive */
+/* Responsive Mobile */
 @media (max-width: 768px) {
     #skills {
-        padding: 100px 0 180px 0;
+        padding: 100px 0 150px 0; /* Kurangin padding di mobile */
     }
 
     .skill-card {
         width: 120px;
         height: 120px;
+    }
+
+    .skill-icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
