@@ -483,19 +483,17 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Skills Section
---------------------------------------------------------------*/
+/* Skills Section */
 #skills {
     padding: 120px 0 180px 0;
     scroll-margin-top: 80px;
 }
 
-/* Skills Container with CSS Grid */
 .skills-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr); /* 5 kolom */
-    gap: 30px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
+    gap: 30px;
 }
 
 /* Skill Card */
@@ -504,14 +502,14 @@ a:hover {
     border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 20px;
     padding: 20px;
+    width: 140px;
+    height: 140px;
     text-align: center;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 140px;
-    height: 140px;
-    transition: var(--transition-default);
+    transition: all 0.4s ease;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
     cursor: pointer;
 }
@@ -519,7 +517,7 @@ a:hover {
 .skill-card:hover {
     background: var(--primary-gradient-color);
     transform: translateY(-8px) scale(1.05);
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.3);
 }
 
 /* Skill Icon */
@@ -537,29 +535,17 @@ a:hover {
     color: var(--text-color);
 }
 
-/* Responsive */
-@media (max-width: 992px) {
-    .skills-container {
-        grid-template-columns: repeat(4, 1fr); /* tablet - 4 kolom */
-    }
-}
-
+/* Responsive - Mobile */
 @media (max-width: 768px) {
-    #skills {
-        padding: 100px 0 150px 0;
-    }
     .skills-container {
-        grid-template-columns: repeat(3, 1fr); /* hp besar - 3 kolom */
+        justify-content: center;
+        gap: 20px; /* sedikit lebih kecil supaya muat */
     }
+    
     .skill-card {
-        width: 120px;
+        width: 45%; /* Dua kolom */
         height: 120px;
-    }
-}
-
-@media (max-width: 576px) {
-    .skills-container {
-        grid-template-columns: repeat(2, 1fr); /* hp kecil - 2 kolom */
+        padding: 15px;
     }
 }
 
