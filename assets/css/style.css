@@ -588,90 +588,26 @@ a:hover {
 # Projects Section
 --------------------------------------------------------------*/
 
-#projects {
-    padding: 100px 0px 80px 0px;
-    min-height: 100vh;
-    background-image: url(../images/grid.png);
-    background-size: contain;
-}
-
 .project-card {
-    background-color: transparent;
-    padding: 10px;
-    border-radius: 24px;
-    backdrop-filter: blur(20px);
-    box-shadow: 0 0 1px 0 rgba(144,81,227,0.5), 0 0 0.5px 0.5px rgba(141,53,229,0.336);
-}
-
-.project-card .title {
-    position: relative;
-    font-size: 18px;
-    text-decoration: none;
-}
-
-.project-card .title::after {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background-image: var(--underline-gradient);
-    transition: width 0.35s ease;
-}
-
-.project-card .title:hover::after {
-    width: 100%;
-}
-
-.project-card .tagline,
-.project-card .stacks,
-.project-card .description {
-    font-size: 11px;
-    color: var(--muted-text);
-}
-
-.project-card .in-progress {
-    font-size: 11px;
-    border-radius: 32px;
-}
-
-.project-card .icon {
-    max-width: 70%;
-}
-
-.project-card .description-container {
-    padding-left: inherit;
-}
-
-.project-card .description {
-    font-size: 14px;
-}
-
-.project-card .banner-container {
-    position: relative;
-    border-radius: 12px;
+    border-radius: 15px;
+    background-color: rgba(255,255,255,0.02);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
     overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.project-card .banner {
-    border-radius: inherit;
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
 }
 
-.project-card .overlay {
-    position: absolute;
+.project-card img {
     width: 100%;
-    height: 100%;
-    opacity: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    top: 0;
-    left: 0;
-    border-radius: inherit;
-    transition: opacity 0.3s ease;
+    height: auto;
+    object-fit: cover;
 }
 
-.project-card .banner-container:hover .overlay {
-    opacity: 0.9;
 /*--------------------------------------------------------------
 # Testimonials Section
 --------------------------------------------------------------*/
