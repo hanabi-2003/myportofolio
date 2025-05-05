@@ -650,20 +650,22 @@ a:hover {
 .project-description {
   max-width: 900px;
   margin-bottom: 40px;
-  color: var(--text-color);
+  color: #cfd8dc; /* soft light gray-blue */
 }
 
 .project-title {
   font-size: 2rem;
   font-weight: 700;
-  margin-bottom: 10px;
-  color: var(--primary-color);
+  margin-bottom: 12px;
+  color: #82b1ff; /* soft blue accent */
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .project-detail {
   font-size: 1rem;
-  color: var(--muted-text);
-  margin: 5px 0;
+  color: #b0bec5; /* muted steel blue-gray */
+  margin: 6px 0;
+  line-height: 1.6;
 }
 
 .project-images {
@@ -674,16 +676,17 @@ a:hover {
 }
 
 .project-images img {
-    width: 320px;
-    height: 200px; /* Tambahkan tinggi tetap */
-    object-fit: cover;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-images img:hover {
   transform: scale(1.05);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.4);
 }
 
 /*--------------------------------------------------------------
