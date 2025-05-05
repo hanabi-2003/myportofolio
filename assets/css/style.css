@@ -591,6 +591,10 @@ a:hover {
     text-align: center;
     color: var(--text-color);
 }
+#skills {
+    padding: 120px 0 100px 0; /* tambahkan bottom spacing */
+    scroll-margin-top: 80px;  /* biar pas saat di klik dari navbar */
+}
 
 /*--------------------------------------------------------------
 # Tools Section
