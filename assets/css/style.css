@@ -674,11 +674,12 @@ a:hover {
 }
 
 .project-images img {
-  width: 280px;
-  max-width: 100%;
-  border-radius: 12px;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
+    width: 320px;
+    height: 200px; /* Tambahkan tinggi tetap */
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
 }
 
 .project-images img:hover {
