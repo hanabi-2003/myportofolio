@@ -302,71 +302,81 @@
             
 
     <!-- Projects -->
-   <section id="projects" class="py-5">
+  <section id="projects">
   <div class="container">
-    <h6 class="text-center"><span class="btn btn-sm theme-button theme-text">What I've done?</span></h6>
-    <h2 class="section-heading text-center mb-4">Projects</h2>
+    <h6 class="section-subtitle">What I've done?</h6>
+    <h2 class="section-title">Projects</h2>
 
-    <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-3" data-aos="fade-up" data-aos-delay="200">
+    <!-- Swiper Container -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
 
-      <!-- Project Card -->
-      <div class="col">
-        <div class="card project-card h-100">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-2">
-              <img src="assets/images/projects/pfpfinder-icon.png" class="me-3 icon" alt="PfpFinder Icon" width="40">
-              <div>
-                <h5 class="card-title m-0">PfpFinder</h5>
-                <small class="text-muted">HTML | CSS | BS | JS + NodeJS</small>
-              </div>
-              <a href="https://hanif.com/" class="ms-auto btn btn-sm badge bg-primary text-white">Visit</a>
-            </div>
-            <p class="card-text">Find the best profile pictures and banners for all your social media accounts.</p>
+        <!-- Slide 1 -->
+        <div class="swiper-slide">
+          <div class="project-card">
+            <h5 class="title">PfpFinder</h5>
+            <p class="description">Find the best profile pictures and banners for your social accounts.</p>
+            <img src="assets/images/pfpfinder.png" alt="PfpFinder" class="icon" />
           </div>
-          <img src="assets/images/projects/pfpfinder-banner.webp" class="card-img-bottom" alt="PfpFinder Preview">
+          <div class="project-card">
+            <h5 class="title">BikeKart</h5>
+            <p class="description">Bike store web template with multiple sections.</p>
+            <img src="assets/images/bikekart.png" alt="BikeKart" class="icon" />
+          </div>
+          <div class="project-card">
+            <h5 class="title">SimpliCalc</h5>
+            <p class="description">Simple calculator web app for daily use.</p>
+            <img src="assets/images/simplicalc.png" alt="SimpliCalc" class="icon" />
+          </div>
         </div>
+
+        <!-- Slide 2 -->
+        <div class="swiper-slide">
+          <div class="project-card">
+            <h5 class="title">EduPlatform</h5>
+            <p class="description">Online education dashboard for students and teachers.</p>
+            <img src="assets/images/eduplatform.png" alt="EduPlatform" class="icon" />
+          </div>
+          <div class="project-card">
+            <h5 class="title">GeoInsight</h5>
+            <p class="description">Geophysics data viewer and interpreter tool.</p>
+            <img src="assets/images/geoinsight.png" alt="GeoInsight" class="icon" />
+          </div>
+          <div class="project-card">
+            <h5 class="title">WeatherNow</h5>
+            <p class="description">Real-time weather and climate forecast UI.</p>
+            <img src="assets/images/weathernow.png" alt="WeatherNow" class="icon" />
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="swiper-slide">
+          <div class="project-card">
+            <h5 class="title">PortoX</h5>
+            <p class="description">Portfolio web template with dark mode switch.</p>
+            <img src="assets/images/portox.png" alt="PortoX" class="icon" />
+          </div>
+          <div class="project-card">
+            <h5 class="title">TaskBoard</h5>
+            <p class="description">Kanban-style task manager built with JS.</p>
+            <img src="assets/images/taskboard.png" alt="TaskBoard" class="icon" />
+          </div>
+          <div class="project-card">
+            <h5 class="title">BlogSpace</h5>
+            <p class="description">Minimal blog theme with CMS integration.</p>
+            <img src="assets/images/blogspace.png" alt="BlogSpace" class="icon" />
+          </div>
+        </div>
+
       </div>
 
-      <!-- Project 2 -->
-      <div class="col">
-        <div class="card project-card h-100">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-2">
-              <img src="assets/images/projects/bikekart-icon.png" class="me-3 icon" alt="BikeKart Icon" width="40">
-              <div>
-                <h5 class="card-title m-0">BikeKart</h5>
-                <small class="text-muted">HTML | CSS</small>
-              </div>
-              <a href="https://itsHabibisingh.github.io/BikeKart/" class="ms-auto btn btn-sm badge bg-primary text-white">Visit</a>
-            </div>
-            <p class="card-text">BikeKart is just another bike store web template with multiple sections.</p>
-          </div>
-          <img src="assets/images/projects/bikekart-banner.webp" class="card-img-bottom" alt="BikeKart Preview">
-        </div>
-      </div>
-
-      <!-- Project 3 - In Progress -->
-      <div class="col">
-        <div class="card project-card h-100 border-dashed">
-          <div class="card-body">
-            <div class="d-flex align-items-center mb-2">
-              <img src="assets/images/projects/simplcalc-icon.png" class="me-3 icon" alt="SimplCalc Icon" width="40">
-              <div>
-                <h5 class="card-title m-0">SimplCalc</h5>
-                <small class="text-muted">HTML | CSS | JS</small>
-              </div>
-              <span class="ms-auto badge bg-secondary">In Progress</span>
-            </div>
-            <p class="card-text">Tired of calculating manually? SimplCalc is your best and faster solution.</p>
-          </div>
-          <img src="assets/images/projects/simplcalc-banner.webp" class="card-img-bottom" alt="SimplCalc Preview">
-        </div>
-      </div>
-
+      <!-- Navigasi dan Pagination -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
-
 
     <!-- Testimonials -->
     <section id="testimonials">
