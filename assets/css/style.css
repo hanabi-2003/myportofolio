@@ -592,8 +592,8 @@ a:hover {
     color: var(--text-color);
 }
 #skills {
-    padding: 120px 0 100px 0; /* tambahkan bottom spacing */
-    scroll-margin-top: 80px;  /* biar pas saat di klik dari navbar */
+    padding: 120px 0 180px 0; /* top | right-left | bottom */
+    scroll-margin-top: 100px; /* biar offset-nya pas saat klik dari navbar */
 }
 
 /*--------------------------------------------------------------
