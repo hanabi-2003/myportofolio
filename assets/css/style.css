@@ -634,70 +634,55 @@ a:hover {
 # Projects Section
 --------------------------------------------------------------*/
 
-.project-card {
-    border-radius: 15px;
-    background-color: rgba(255,255,255,0.02);
-    backdrop-filter: blur(10px);
-    box-shadow: 0 8px 24px rgba(0,0,0,0.2);
-    overflow: hidden;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+#projects {
+  text-align: center;
+  padding: 80px 20px;
 }
 
-.project-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 12px 30px rgba(0,0,0,0.3);
-}
-
-.project-card img {
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-}
-
-.project-slide {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 20px;
-    text-align: center;
+.swiper-slide.project-slide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
 }
 
 .project-description {
-    max-width: 700px;
-    color: var(--text-color);
+  max-width: 900px;
+  margin-bottom: 40px;
+  color: var(--text-color);
 }
 
 .project-title {
-    font-size: 2rem;
-    font-weight: 700;
-    margin-bottom: 10px;
-    color: var(--primary-color);
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--primary-color);
 }
 
 .project-detail {
-    font-size: 1rem;
-    color: var(--muted-text);
-    margin: 5px 0;
+  font-size: 1rem;
+  color: var(--muted-text);
+  margin: 5px 0;
 }
 
 .project-images {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .project-images img {
-    width: 280px;
-    max-width: 100%;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease;
+  width: 280px;
+  max-width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
 .project-images img:hover {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 /*--------------------------------------------------------------
