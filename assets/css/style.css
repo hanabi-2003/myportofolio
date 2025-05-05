@@ -592,7 +592,7 @@ a:hover {
     color: var(--text-color);
 }
 #skills {
-    padding: 120px 0 180px 0; /* top | right-left | bottom */
+    padding: 120px 0 200px 0; /* top | right-left | bottom */
     scroll-margin-top: 100px; /* biar offset-nya pas saat klik dari navbar */
 }
 
