@@ -996,30 +996,33 @@ a:hover {
     width: 90%;
   }
 }
-/* === Fix Bug: Navbar Offcanvas Mobile & Hero Overlap === */
+/* === FIX: Mobile Navbar & Hero Overlap Bug === */
 @media (max-width: 767px) {
   .offcanvas.show {
+    top: 0 !important;
+    padding-top: 80px;
     height: 100vh;
     overflow-y: auto;
-    padding-top: 100px; /* agar konten tidak mentok ke atas */
     background-color: var(--bg-color);
+    z-index: 1050;
   }
 
   .offcanvas.show ul {
-    padding-top: 20px;
+    padding-top: 10px;
+  }
+
+  .navbar-toggler {
+    z-index: 1060;
+    position: relative;
   }
 
   .hero-content {
-    margin-top: 50px;
+    margin-top: 40px;
   }
-}
 
-.navbar-toggler {
-  z-index: 1051;
-}
-
-.offcanvas-backdrop {
-  z-index: 1040;
+  body.offcanvas-open {
+    overflow: hidden;
+  }
 }
 
 /*--------- Back To Top Button ------------*/
