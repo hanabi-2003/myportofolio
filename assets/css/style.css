@@ -1002,44 +1002,51 @@ a:hover {
   z-index: 1050 !important;
   position: relative;
 }
-/* === FIX: Offcanvas Navbar Visibility over Hero Section === */
+/* === REVERT PATCH: Fix Offcanvas Navbar ke Tampilan Semula === */
 
-/* Hero section should be beneath offcanvas */
-#hero {
-  position: relative;
-  z-index: 0;
-}
-
-/* Offcanvas backdrop */
 .offcanvas-backdrop {
   z-index: 1040 !important;
 }
 
-/* Offcanvas panel */
 .offcanvas {
   z-index: 1045 !important;
   background-color: var(--offcanvas-bg) !important;
   border-left: 1px solid var(--offcanvas-border-color);
 }
 
-/* Offcanvas content */
 .offcanvas-body {
   z-index: 1046 !important;
   position: relative;
 }
 
-/* Navbar toggler and theme switcher */
 .navbar-toggler,
 #switchTheme {
   z-index: 1050 !important;
   position: relative;
 }
 
-/* Ensure background overlays are behind content */
+#hero {
+  position: relative;
+  z-index: 0;
+  background-color: transparent;
+}
+
+/* Hapus tambahan z-index tinggi dan pointer-events untuk ::before */
 [data-bs-theme="dark"]::before,
 [data-bs-theme="light"]::before {
+  pointer-events: auto;
   z-index: -1 !important;
-  pointer-events: none;
+}
+
+/* Hapus override warna text offcanvas (tidak dibutuhkan jika pakai Bootstrap dark utilities) */
+[data-bs-theme="dark"] .offcanvas,
+[data-bs-theme="dark"] .offcanvas-body {
+  background-color: var(--offcanvas-bg) !important;
+  color: inherit !important;
+}
+
+[data-bs-theme="dark"] .offcanvas .nav-link {
+  color: inherit !important;
 }
 
 /*--------- Back To Top Button ------------*/
