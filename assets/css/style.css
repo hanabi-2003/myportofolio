@@ -996,6 +996,31 @@ a:hover {
     width: 90%;
   }
 }
+/* === Fix Bug: Navbar Offcanvas Mobile & Hero Overlap === */
+@media (max-width: 767px) {
+  .offcanvas.show {
+    height: 100vh;
+    overflow-y: auto;
+    padding-top: 100px; /* agar konten tidak mentok ke atas */
+    background-color: var(--bg-color);
+  }
+
+  .offcanvas.show ul {
+    padding-top: 20px;
+  }
+
+  .hero-content {
+    margin-top: 50px;
+  }
+}
+
+.navbar-toggler {
+  z-index: 1051;
+}
+
+.offcanvas-backdrop {
+  z-index: 1040;
+}
 
 /*--------- Back To Top Button ------------*/
 
