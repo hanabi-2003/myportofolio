@@ -1002,71 +1002,44 @@ a:hover {
   z-index: 1050 !important;
   position: relative;
 }
-/* ======== PATCH: FIX OFFCANVAS DARK MODE VISIBILITY ======== */
+/* === FIX: Offcanvas Navbar Visibility over Hero Section === */
 
-/* 1. Pastikan Offcanvas di dark mode terlihat jelas */
-[data-bs-theme="dark"] .offcanvas,
-[data-bs-theme="dark"] .offcanvas-body {
-  background-color: rgba(0, 0, 0, 0.95) !important;
-  color: #fff !important;
-}
-
-/* 2. Warna link navigasi di dalam offcanvas (dark mode) */
-[data-bs-theme="dark"] .offcanvas .nav-link {
-  color: #ffffff !important;
-}
-
-/* 3. Z-index tinggikan supaya offcanvas dan isi tampil di atas background gelap */
-.offcanvas {
-  z-index: 1060 !important;
-}
-
-.offcanvas-body {
-  z-index: 1061 !important;
-  position: relative;
-}
-
-/* 4. Cegah background gelap menutup interaksi di depan (hero section) */
-[data-bs-theme="dark"]::before {
-  pointer-events: none;
-}
-
-/* 5. Pastikan button hamburger dan theme switcher selalu di atas */
-.navbar-toggler,
-#switchTheme {
-  z-index: 1070 !important;
-  position: relative;
-}
-/* === FIX for #hero conflicting with offcanvas navbar in dark mode === */
+/* Hero section should be beneath offcanvas */
 #hero {
   position: relative;
-  z-index: 0; /* pastikan lebih rendah dari offcanvas */
-  background-color: transparent;
+  z-index: 0;
 }
 
-.offcanvas-backdrop.show {
+/* Offcanvas backdrop */
+.offcanvas-backdrop {
   z-index: 1040 !important;
 }
 
-.offcanvas.show {
+/* Offcanvas panel */
+.offcanvas {
   z-index: 1045 !important;
+  background-color: var(--offcanvas-bg) !important;
+  border-left: 1px solid var(--offcanvas-border-color);
 }
 
+/* Offcanvas content */
 .offcanvas-body {
   z-index: 1046 !important;
-  background-color: var(--offcanvas-bg);
   position: relative;
 }
 
+/* Navbar toggler and theme switcher */
 .navbar-toggler,
 #switchTheme {
   z-index: 1050 !important;
+  position: relative;
 }
 
-/* Tambahan penting untuk mencegah offcanvas tertumpuk oleh #hero */
+/* Ensure background overlays are behind content */
 [data-bs-theme="dark"]::before,
 [data-bs-theme="light"]::before {
-  z-index: -2 !important;
+  z-index: -1 !important;
+  pointer-events: none;
 }
 
 /*--------- Back To Top Button ------------*/
